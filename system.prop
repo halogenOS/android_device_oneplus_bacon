@@ -90,5 +90,8 @@ ro.qti.sensors.vmd=true
 # Time services
 persist.timed.enable=true
 
+# Tethering
+net.tethering.noprovisioning=true
+
 # Wifi
 wifi.interface=wlan0
