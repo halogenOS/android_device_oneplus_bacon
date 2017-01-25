@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2016 The Xperia Open Source Project
+     
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+     
+          http://www.apache.org/licenses/LICENSE-2.0
+     
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<changelog bulletedList="true">
+    <changelogversion versionName="RL7 Revision 1" changeDate="Dec 02,2016">
+        <changelogtext>Initial Nougat Release...</changelogtext>
+        <changelogtext>Disclaimer:SultanXDA blobs will be added on 2nd release</changelogtext>
+        <changelogtext>They wont be added right away because some testing is needed</changelogtext>
+    </changelogversion>
+	
+    <changelogversion versionName="RL8 Revision 1" changeDate="Jan 24,2017">
+        <changelogtext>WIP: replaced shitty CM blobs with the best:</changelogtext>
+		<changelogtext>the ones from OOS3 for onyx</changelogtext>
+		<changelogtext>Special thanks to @ab123321 , for making this possible</changelogtext>
+    </changelogversion>
+
+</changelog>
