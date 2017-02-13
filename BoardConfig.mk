@@ -90,11 +90,20 @@ TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
 # Enable dexpreopt to speed boot time
 ifeq ($(HOST_OS),linux)
-  ifeq ($(call match-word-in-list,$(TARGET_BUILD_VARIANT),user),true)
-    ifeq ($(WITH_DEXPREOPT_BOOT_IMG_ONLY),)
-      WITH_DEXPREOPT_BOOT_IMG_ONLY := true
+  # Only enable on user builds It's annoying to have to flash the whole rom to 
+  # test things etc.
+  ifeq ($(TARGET_BUILD_VARIANT),user)
+    ifeq ($(WITH_DEXPREOPT),)
+      WITH_DEXPREOPT := true
     endif
-  endif
+  else
+    # Environment variable
+    ifeq ($(TARGET_FORCE_DEXPREOPT),true)
+      WITH_DEXPREOPT := true
+    else
+      WITH_DEXPREOPT := false
+    endif # TARGET_FORCE_DEXPREOPT = true
+  endif # TARGET_BUILD_VARIANT = user
 endif
 
 # Encryption
