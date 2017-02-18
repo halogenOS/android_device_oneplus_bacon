@@ -172,6 +172,9 @@ TARGET_NO_RPC := true
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
 
+# Sensors
+TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
+
 # Snapdragon LLVM
 TARGET_USE_SDCLANG := true
 
