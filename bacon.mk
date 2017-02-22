@@ -73,8 +73,6 @@ TARGET_SCREEN_WIDTH := 1080
 
 # Camera
 PRODUCT_PACKAGES += \
-    camera.bacon \
-    libshim_camera \
     Snap
 
 # Charger
@@ -107,7 +105,8 @@ PRODUCT_PACKAGES += \
     gralloc.msm8974 \
     hwcomposer.msm8974 \
     memtrack.msm8974 \
-    liboverlay
+    liboverlay \
+    libboringssl-compat
 
 # GPS
 PRODUCT_PACKAGES += \
