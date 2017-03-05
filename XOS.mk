@@ -28,6 +28,11 @@ PRODUCT_MODEL := A0001
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.ota.romname=$(PRODUCT_NAME) \
+    persist.ota.version=$(shell date +%Y%m%d) \
+    persist.ota.manifest=https://raw.githubusercontent.com/halogenOS/android_extras_ota/XOS-7.1/$(PRODUCT_NAME).xml
+
 PRODUCT_BRAND := oneplus
 TARGET_VENDOR := oneplus
 TARGET_VENDOR_PRODUCT_NAME := bacon
