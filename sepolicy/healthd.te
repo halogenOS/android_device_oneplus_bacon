@@ -1,1 +1,2 @@
 allow healthd device:dir r_dir_perms;
+allow healthd healthd:capability { dac_override dac_read_search };
