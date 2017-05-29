@@ -88,23 +88,12 @@ BOARD_USES_CYANOGEN_HARDWARE := true
 BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/cmhw
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
-# Enable dexpreopt to speed boot time
-ifeq ($(HOST_OS),linux)
-  # Only enable on user builds It's annoying to have to flash the whole rom to 
-  # test things etc.
-  ifeq ($(TARGET_BUILD_VARIANT),user)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-    endif
-  else
-    # Environment variable
-    ifeq ($(TARGET_FORCE_DEXPREOPT),true)
-      WITH_DEXPREOPT := true
-    else
-      WITH_DEXPREOPT := false
-    endif # TARGET_FORCE_DEXPREOPT = true
-  endif # TARGET_BUILD_VARIANT = user
-endif
+# Environment variable
+ifeq ($(TARGET_FORCE_DEXPREOPT),true)
+    WITH_DEXPREOPT := true
+else
+   WITH_DEXPREOPT := false
+endif # TARGET_FORCE_DEXPREOPT = true
 
 # Encryption
 TARGET_HW_DISK_ENCRYPTION := true
